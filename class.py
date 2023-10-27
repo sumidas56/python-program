@@ -1,12 +1,17 @@
 classes={}
 std=[]
-tchrs=['sumi','sreelekshmi','surya']
+tchrs=['sumi','sreelekshmi','surya','krishna','arya','nandana']
 
 def student():
     name=input("name")
     roll_no=input("roll_num")
     age=input("age")
-    clas=input("class[5,6,7]")
+    clas=int(input("class"))
+    if clas>=5 and clas<=10:
+     print(clas)
+    else:
+      print("invalid entry")
+
 
     classes['name']=name
     classes['roll_no']=roll_no
@@ -27,7 +32,9 @@ def tchr():
         print(i)
 
 def assign_tchr():
-    tchr_name=input("enter the teacher name")
+    tchr_name=int(input("select the teacher from the list above"))
+    a=tchr_name-1
+    print(tchrs[a])
     
 
     
@@ -41,7 +48,8 @@ while choice !='n':
     
           1): ADD NEW STUDENT
           2): VIEW STUDENT DETAILS
-          3): VIEW TEACHERS INCHARGE''')
+          3): VIEW TEACHERS INCHARGE
+          4): SELECT TEACHER''')
    choices=int(input("enter the task"))
    if choices==1:
        student()
@@ -49,6 +57,8 @@ while choice !='n':
        std_view()
    elif choices==3:
        tchr()
+   elif choices==4:
+       assign_tchr()
 
 
     
