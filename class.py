@@ -35,7 +35,10 @@ def assign_tchr():
     tchr_name=int(input("select the teacher from the list above"))
     a=tchr_name-1
     print(tchrs[a])
-    
+
+    b=int(input("class"))
+    std1=std.copy()
+    std_num=[]
 
     
         
